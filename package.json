@@ -1,0 +1,45 @@
+{
+  "name": "wingo",
+  "version": "0.1.0",
+  "description": "Platform to make offers and advertising campaigns in mobiles.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel-node server --presets es2015"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nesslopz/wingo.git"
+  },
+  "keywords": [
+    "offers",
+    "discounts",
+    "places",
+    "awesome",
+    "night",
+    "people",
+    "city",
+    "friends",
+    "enjoy"
+  ],
+  "author": "Ness Lopez <n@wingo.io>",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/nesslopz/wingo/issues"
+  },
+  "dependencies": {
+    "babel-cli": "^6.2.0",
+    "babel-core": "^6.2.1",
+    "babel-preset-es2015": "^6.1.18",
+    "express": "^4.13.3"
+  },
+  "devDependencies": {
+    "browserify": "^12.0.1",
+    "istanbul": "^0.4.1",
+    "nock": "^3.3.2",
+    "standard": "^5.4.1",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.2.2",
+    "rethinkdb": "^2.2.0"
+  }
+}

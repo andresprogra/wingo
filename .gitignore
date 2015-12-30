@@ -1,0 +1,5 @@
+node_modules/
+coverage/
+rethinkdb_data/
+*.log
+*.sublime*

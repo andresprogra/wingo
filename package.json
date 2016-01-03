@@ -4,12 +4,16 @@
   "description": "Platform to make offers and advertising campaigns in mobiles.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "babel-node server --presets es2015"
+    "public": "mkdir -p public/js public/css",
+    "build-js": "browserify -t [ babelify --presets [ es2015 ] ] client/js/index.js > public/js/app.js",
+    "copy-files": "cp client/css/main.css public/css/app.css && cp client/index.html public/index.html",
+    "build": "npm run public && npm run build-js && npm run copy-files",
+    "serve": "serve public",
+    "start": "npm run build && npm run serve"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/nesslopz/wingo.git"
+    "url": "git+https://github.com/nesslopz/wingo.git"
   },
   "keywords": [
     "offers",
@@ -22,24 +26,24 @@
     "friends",
     "enjoy"
   ],
-  "author": "Ness Lopez <n@wingo.io>",
+  "author": "Nestor López <n@wingo.io>",
   "license": "UNLICENSED",
   "bugs": {
     "url": "https://github.com/nesslopz/wingo/issues"
   },
+  "homepage": "https://github.com/nesslopz/inegi-denue#readme",
   "dependencies": {
     "babel-cli": "^6.2.0",
     "babel-core": "^6.2.1",
     "babel-preset-es2015": "^6.1.18",
-    "express": "^4.13.3"
+    "express": "^4.13.3",
+    "inegi-denue": "^1.0.4",
+    "jquery": "^2.1.4"
   },
   "devDependencies": {
+    "babel-preset-es2015": "^6.3.13",
+    "babelify": "^7.2.0",
     "browserify": "^12.0.1",
-    "istanbul": "^0.4.1",
-    "nock": "^3.3.2",
-    "standard": "^5.4.1",
-    "tap-spec": "^4.1.1",
-    "tape": "^4.2.2",
     "rethinkdb": "^2.2.0"
   }
 }

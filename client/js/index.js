@@ -1,13 +1,11 @@
-(function() {
+import $ from 'jquery'
+
+$(function() {
 
   var $PlacesContainer = $('#app-body')
 
   var API = {
-<<<<<<< HEAD
     uri       : 'http://www3.inegi.org.mx/sistemas/api/denue/v1/consulta/buscar/',
-=======
-    uri       : '//www3.inegi.org.mx/sistemas/api/denue/v1/consulta/buscar/',
->>>>>>> b14423a49c36ec02c24d78b92470713c872e5c49
     category  : this.category | 'todos',
     close     : this.close | 1500,
     key       : '7c1bdae4-bfc0-4cd9-be2b-2936baa50953'
@@ -15,20 +13,12 @@
 
   var template =
   '<article class="wingo-place">' +
-<<<<<<< HEAD
     '<div>' +
     '<h3 class="name">:name:</h3>' +
     '</div>' +
     '<div class="info">' +
     '<p>Domicilio: :calle: :num_E: :num_I: Colonia: :col:</p>' +
     '<a href="tel::tel:" class=":button_call:">Llamar 🚛</a>'
-=======
-    '<div class="img-container left">' +
-    '<h3 class="name">:name:</h3>' +
-    '</div>' +
-    '<div class="info right">' +
-    '<p>Domicilio: :dom: Tel: :tel: </p>'
->>>>>>> b14423a49c36ec02c24d78b92470713c872e5c49
     'Actividad: :desc:</div>' +
     '</article>'
 
@@ -49,7 +39,6 @@
   function getCoords(position) {
     var lat = position.coords.latitude;
     var lon = position.coords.longitude;
-<<<<<<< HEAD
     $.getJSON(API.uri + API.category + '/' + lat + ',' + lon + '/' + 200 + '/' + API.key, getPlaces)
   }
 
@@ -76,7 +65,7 @@
     })
   }
 
-})()
+})
 
 
 
@@ -95,24 +84,3 @@ var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a))
 var d = R * c
 return d
 }
-=======
-    console.log("Tu posición es: " + lat + "," + lon)
-    $.getJSON(API.uri + API.category + '/' + lat + ',' + lon + '/' + 200 + '/' + API.key, getPlaces)
-  }
-
-  function getPlaces(places) {
-    console.log(places)
-    places.forEach(function (place) {
-      var article = template
-      .replace(':name:', place.Nombre)
-      .replace(':dom:', place.Calle + ' ' + place.Num_Exterior + ' ' + place.Num_Interior + ' ' + place.Colonia)
-      .replace(':tel:', place.Telefono)
-      .replace(':desc:', place.Clase_actividad)
-
-
-      $PlacesContainer.append($(article))
-    })
-  }
-
-})()
->>>>>>> b14423a49c36ec02c24d78b92470713c872e5c49

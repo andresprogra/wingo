@@ -1,6 +1,5 @@
 node_modules/
 coverage/
 rethinkdb_data/
-public/
 *.log
 *.sublime*

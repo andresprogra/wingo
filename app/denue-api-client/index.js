@@ -1,7 +1,7 @@
 import $ from 'jquery'
 
 var API = {
-  uri       : '//www3.inegi.org.mx/sistemas/api/denue/v1/consulta/buscar/',
+  uri       : 'http//www3.inegi.org.mx/sistemas/api/denue/v1/consulta/buscar/',
   category  : 'todos',
   close     : 1500,
   key       : '7c1bdae4-bfc0-4cd9-be2b-2936baa50953'

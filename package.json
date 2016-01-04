@@ -8,7 +8,7 @@
     "build-js": "browserify -t [ babelify --presets [ es2015 ] ] app/index.js > public/js/app.js",
     "copy-files": "cp client/css/main.css public/css/app.css && cp client/index.html public/index.html",
     "build": "npm run public && npm run build-js && npm run copy-files",
-    "serve": "serve public",
+    "serve": "babel-node server --presets es2015",
     "start": "npm run build && npm run serve"
   },
   "repository": {

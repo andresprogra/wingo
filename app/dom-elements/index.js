@@ -14,7 +14,4 @@ var placeTemplate = `<article class="wingo-place">
   <p><small>Actividad: :desc:</small></p></div>
   </article>`
 
-console.log($placesContainer)
-console.log(placeTemplate)
-
 export { $placesContainer, placeTemplate }

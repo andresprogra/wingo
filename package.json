@@ -42,6 +42,7 @@
     "browserify": "^12.0.1",
     "babel-preset-es2015": "^6.3.13",
     "page": "^1.6.4",
+    "browserify": "^12.0.1",
     "serve": "^1.4.0"
   },
   "devDependencies": {

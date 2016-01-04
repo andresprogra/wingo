@@ -40,12 +40,11 @@
     "inegi-denue": "^1.0.4",
     "jquery": "^2.1.4",
     "page": "^1.6.4",
+    "browserify": "^12.0.1",
     "serve": "^1.4.0"
   },
   "devDependencies": {
     "babel-preset-es2015": "^6.3.13",
     "babelify": "^7.2.0",
-    "browserify": "^12.0.1",
-    "rethinkdb": "^2.2.0"
   }
 }

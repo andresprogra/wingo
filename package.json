@@ -1,6 +1,6 @@
 {
   "name": "wingo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Platform to make offers and advertising campaigns in mobiles.",
   "main": "index.js",
   "scripts": {

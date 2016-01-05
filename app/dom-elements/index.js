@@ -1,6 +1,18 @@
 import $ from 'jquery'
+import page from 'page'
 
 var $placesContainer = $('#app-body')
+var $searchPlaces = $placesContainer
+  .find('form')
+  .submit(function(ev) {
+    ev.preventDefault()
+
+    var busq = $(this)
+      .find('input[type="text"]')
+      .val()
+
+    page(`/search?q=${busq}`)
+  })
 
 var placeTemplate = `<article class="wingo-place">
   <div>
@@ -14,4 +26,15 @@ var placeTemplate = `<article class="wingo-place">
   <p><small>Actividad: :desc:</small></p></div>
   </article>`
 
-export { $placesContainer, placeTemplate }
+var errorTemplate =
+`<div id="errorHandler" class="wingo-place errorBox hide">
+  <h5 class="errorBox__title">:errorTitle:</h5>
+  <p class="errorBox__text">:errorText:</p>
+</div>`
+
+export {
+  $placesContainer,
+  $searchPlaces,
+  placeTemplate,
+  errorTemplate
+  }

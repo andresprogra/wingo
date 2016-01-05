@@ -1,6 +1,6 @@
 import $ from 'jquery'
 
-export function getCoords(callback) {
+export default function getCoords(callback) {
   if(navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(getCoords, errorFound);
     } else {

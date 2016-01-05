@@ -1,11 +1,11 @@
 import $ from 'jquery'
-import { $placesContainer, placeTemplate } from '../dom-elements/'
+import {$placesContainer, placeTemplate} from 'app/dom-elements/'
 
 export function renderPlaces (places) {
 
   $placesContainer.find('.loader').remove()
 
-  places.forEach(function (place) {
+  $(places).each(function(i, place) {
     var article = placeTemplate
     .replace(':name:', place.Nombre)
     .replace(':calle:', place.Calle)
